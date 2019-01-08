@@ -5,7 +5,6 @@ const path = require('path');
 const {app, BrowserWindow, Menu, ipcMain} = electron;
 let mainwindow;
 
-const createMenu = require('./src/mainMenu')
 
 // Initialize main window.
 const createWindow = () => {
@@ -20,7 +19,7 @@ const createWindow = () => {
         app.quit();
     });
 
-    require('./src/mainMenu')
+    require('./src/mainMenu');
 };
 
 
