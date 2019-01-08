@@ -8,7 +8,12 @@ let mainwindow;
 
 // Initialize main window.
 const createWindow = () => {
-    mainwindow = new BrowserWindow({});
+    mainwindow = new BrowserWindow({
+        width: 1024,
+        height:768,
+        minWidth: 1024,
+        minHeight: 768
+    });
     mainwindow.loadURL(url.format({
         pathname: path.join(__dirname, 'browser', 'index.html'),
         protocol: 'file:',
