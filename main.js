@@ -5,7 +5,9 @@ const path = require('path');
 const {app, BrowserWindow, Menu, ipcMain} = electron;
 let mainwindow;
 
-// Initialize.
+const createMenu = require('./src/mainMenu')
+
+// Initialize main window.
 const createWindow = () => {
     mainwindow = new BrowserWindow({});
     mainwindow.loadURL(url.format({
@@ -18,7 +20,9 @@ const createWindow = () => {
         app.quit();
     });
 
-    
+    require('./src/mainMenu')
 };
+
+
 
 app.on('ready', createWindow);
