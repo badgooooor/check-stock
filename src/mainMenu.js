@@ -2,18 +2,29 @@ const electron = require('electron');
 const {Menu} = require('electron');
 const app = electron.app
 
+const addProduct = require('./addProduct');
+const editProduct = require('./editProduct')
 const mainMenuTemplate = [
     {
         label: 'Products',
         submenu: [
             {
-                label: 'Add Product'
+                label: 'Add Product',
+                click() {
+                    addProduct.addProductWindow();
+                }
             },
             {
-                label: 'Delete Product'
+                label: 'Delete Product',
+                click() {
+                    
+                }
             },
             {
-                label: 'Edit Product'
+                label: 'Edit Product',
+                click() {
+                    editProduct.editProductWindow();
+                }
             }
         ]
     },
@@ -41,5 +52,3 @@ if (process.env.NODE_ENV != 'production') {
 
 const menu = Menu.buildFromTemplate(mainMenuTemplate);
 Menu.setApplicationMenu(menu);
-
-
