@@ -6,6 +6,7 @@
   "scripts": {
     "start": "electron .",
     "dev": "cross-env NODE_ENV=dev electron .",
+    "production": "cross-env NODE_ENV=production electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "borBier",

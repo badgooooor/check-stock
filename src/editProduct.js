@@ -8,7 +8,7 @@ module.exports = {
     editProductWindow: function() {
         editWindow = new BrowserWindow({
             width: 600,
-            height: 400,
+            height: 800,
             title: 'Add Product'
         });
         editWindow.loadURL(url.format({
