@@ -15,12 +15,6 @@ const mainMenuTemplate = [
                 }
             },
             {
-                label: 'Delete Product',
-                click() {
-                    
-                }
-            },
-            {
                 label: 'Edit Product',
                 click() {
                     editProduct.editProductWindow();

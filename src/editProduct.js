@@ -7,8 +7,8 @@ const {app, BrowserWindow} = electron;
 module.exports = {
     editProductWindow: function() {
         editWindow = new BrowserWindow({
-            width: 600,
-            height: 800,
+            width: 400,
+            height: 600,
             title: 'Add Product'
         });
         editWindow.loadURL(url.format({

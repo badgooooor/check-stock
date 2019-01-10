@@ -7,8 +7,37 @@
 </head>
 
 <body>
-    <div class="container">
-        <h2>Edit Product</h2>
+  <div class="container">
+    <h4>Edit Product</h4>
+    <div class="row">
+      <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Product Name" id="name" type="text" class="validate">
+              </div>
+              <div class="input-field col s6">
+                <input placeholder="Price" id="price" type="text" class="validate">
+              </div>
+            </div>
+            <div class="row">
+              <h5>Quantity</h5>
+              <div class="input-field col s4">
+                <input placeholder="Min items" id="quantity_min" type="text" class="validate">
+              </div>
+              <div class="input-field col s4">
+                <input placeholder="Max items" id="quantity_max" type="text" class="validate">
+              </div>
+            </div>
+            <div class="row">
+              <h5>Others</h5>
+              <input placeholder="Description" id="description" type="text">
+            </div>
+
+            <div>
+              <button class="btn right teal lighten-2 waves-effect waves-light" type="submit">Edit Item</button>
+              <button class="btn left red darken-3 waves-effect waves-light" type="submit">Delete Item</button>
+            </div>
+      </form>
     </div>
 </body>
 
