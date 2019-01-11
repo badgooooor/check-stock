@@ -12,7 +12,7 @@ module.exports = {
             title: 'Add Product'
         });
         addWindow.loadURL(url.format({
-            pathname: path.join(__dirname,'..','browser', 'addProduct.html'),
+            pathname: path.join(__dirname,'..','..','browser', 'addProduct.html'),
             protocol: 'file:',
             slashes: true
         }));

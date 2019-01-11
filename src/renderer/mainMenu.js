@@ -2,8 +2,8 @@ const electron = require('electron');
 const {Menu} = require('electron');
 const app = electron.app
 
-const addProduct = require('./renderer/addProduct');
-const editProduct = require('./renderer/editProduct')
+const addProduct = require('./addProduct');
+const editProduct = require('./editProduct')
 const mainMenuTemplate = [
     {
         label: 'Products',

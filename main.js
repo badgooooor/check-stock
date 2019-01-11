@@ -24,7 +24,7 @@ const createWindow = () => {
         app.quit();
     });
 
-    require('./src/mainMenu');
+    require('./src/renderer/mainMenu');
 };
 
 

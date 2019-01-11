@@ -9,10 +9,10 @@ module.exports = {
         editWindow = new BrowserWindow({
             width: 400,
             height: 600,
-            title: 'Add Product'
+            title: 'Title Product'
         });
         editWindow.loadURL(url.format({
-            pathname: path.join(__dirname,'..','browser', 'editProduct.html'),
+            pathname: path.join(__dirname,'..','..','browser', 'editProduct.html'),
             protocol: 'file:',
             slashes: true
         }));
