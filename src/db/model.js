@@ -60,7 +60,7 @@ SQL.dbClose = function (databaseHandle, databaseFileName) {
 // Initialize a new SQLite3 database from schema.sql
 // (Called from main.js during initialization)
 module.exports.initDb = function (appPath, callback) {
-    let dbPath = path.join(appPath, 'example.db')
+    let dbPath = path.join(appPath, 'stock.db')
     let createDb = function (dbPath) {
       // Create a database.
       let db = new SQL.Database()
@@ -75,15 +75,15 @@ module.exports.initDb = function (appPath, callback) {
         console.log('model.initDb.createDb failed.')
       }
     }
+
     let db = null;
     try {
         db = SQL.dbOpen(dbPath)
     } catch (err) {
         createDb(dbPath)
-        console.log(err)
     }
+    
     if (db === null) {
-      /* The file doesn't exist so create a new database. */
       createDb(dbPath)
     } else {
       /*
@@ -103,7 +103,7 @@ module.exports.initDb = function (appPath, callback) {
         callback()
       }
     }
-  }
+}
 
 // List products.
 module.exports.getProducts = function () {
