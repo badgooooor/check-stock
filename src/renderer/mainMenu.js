@@ -2,8 +2,10 @@ const electron = require('electron');
 const {Menu} = require('electron');
 const app = electron.app
 
-const addProduct = require('./addProduct');
+const addProduct = require('./addProduct')
 const editProduct = require('./editProduct')
+const listStock = require('./listStock')
+
 const mainMenuTemplate = [
     {
         label: 'Products',
@@ -20,9 +22,19 @@ const mainMenuTemplate = [
                     editProduct.editProductWindow();
                 }
             }
+        ],
+    }, 
+    {
+        label: 'Stock',
+        submenu: [
+            {
+                label: 'View Stock',
+                click() {
+                    listStock.listStockWindow();
+                }
+            }
         ]
     },
-    
 ];
 
 if (process.env.NODE_ENV != 'production') {
