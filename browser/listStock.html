@@ -2,8 +2,74 @@
 <html>
   <head>
     <title>Stock list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   </head>
   <body>
-    <h4>Product list</h4>
+    <div class="container">
+      <h2>Stock List</h2>
+    <div class="row">
+      <div class="col s6">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <div class="section">
+          <table class="striped">
+            <thead>
+              <th>ID</th>
+              <th>Name</th>
+            </thead>
+            <tbody>
+
+              <!-- Sample data -->
+              <tr>
+                <td>1</td>
+                <td>Sample C</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="divider"></div>
+      </div>
+      <div class="col s6">
+        <h5>Product detail</h5>
+
+        <div class="divider"></div>
+        <div class="section">
+          <table class="responsive-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Item</th>
+                <th>Minimum Items</th>
+                <th>Maximum Items</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Teddy Picker</td>
+                <td>300</td>
+                <td>10</td>
+                <td>5</td>
+                <td>20</td>
+                <td>Game machine.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="divider"></div>
+        <div class="section">
+          <button class="btn left yellow darken-1 waves-effect waves-light">Adjust Stock</button>
+            <button class="btn right light-blue waves-effect waves-light">Edit Product</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script>
+    
+    </script>
   </body>
 </html>
