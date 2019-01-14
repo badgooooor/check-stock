@@ -2,8 +2,32 @@
 <html>
   <head>
     <title>Adjust Stock</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   </head>
   <body>
-    <h4>Adjust Stock</h4>
+    <div class="container">
+      <h4>Adjust Stock</h4>
+      <p>Name : Neo Armstrong</p>
+      <p>Original Item : 10</p>
+      <div class="divider"></div>
+      <form>
+        <div class="input-field col s3">
+          <select>
+            <option value="" disabled selected>Choose log</option>
+            <option value="1">IN</option>
+            <option value="2">OUT</option>
+          </select>
+          <label>Materialize Select</label>
+        </div>
+        <div class="input-field col s9">
+          <input placeholder="Items" id="quantity" type="text" class="validate">
+        </div>
+      </form>
+
+      <div>
+          <button class="btn left red darken-3 waves-effect waves-light" type="submit">Cancel</button>
+          <button class="btn right teal lighten-2 waves-effect waves-light" type="submit">Add Item</button>
+      </div>
+    </div>
   </body>
 </html>
