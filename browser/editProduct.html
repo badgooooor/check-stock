@@ -34,11 +34,19 @@
             </div>
 
             <div>
-              <button class="btn right teal lighten-2 waves-effect waves-light" type="submit">Edit Item</button>
-              <button class="btn left red darken-3 waves-effect waves-light" type="submit">Delete Item</button>
+              <button class="btn left grey lighten-3 waves-effect waves-light" style="margin:5px;" id="close-btn">Cancel</button>
+              <button class="btn left red darken-3 waves-effect waves-light" style="margin:5px;" type="submit">Delete Item</button>
+              <button class="btn right teal lighten-2 waves-effect waves-light" style="margin:5px;" type="submit">Edit Item</button>
             </div>
       </form>
     </div>
+  </div>
+  <script>
+    const remote = require('electron').remote
+    document.getElementById("close-btn").addEventListener("click", function (e) {
+      remote.getCurrentWindow().close()
+    })
+  </script>
 </body>
 
 </html>
