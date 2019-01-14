@@ -8,6 +8,7 @@ let mainwindow;
 
 const editProduct = require('./src/renderer/editProduct');
 const addProduct = require('./src/renderer/addProduct');
+const adjStock = require('./src/renderer/adjStock');
 
 // Initialize main window.
 const createWindow = () => {
@@ -40,7 +41,7 @@ ipcMain.on('open:prod:edit', (e) => {
 })
 
 ipcMain.on('open:prod:adj', (e) => {
-
+    adjStock.adjStockWindow();
 })
 
 
