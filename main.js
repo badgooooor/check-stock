@@ -3,9 +3,11 @@ const url = require('url');
 const path = require('path');
 const model = require('./src/db/model');
 
-const {app, BrowserWindow, Menu, ipcMain} = electron;
+const {app, BrowserWindow, ipcMain} = electron;
 let mainwindow;
 
+const editProduct = require('./src/renderer/editProduct');
+const addProduct = require('./src/renderer/addProduct');
 
 // Initialize main window.
 const createWindow = () => {
@@ -33,7 +35,13 @@ const createWindow = () => {
     mainwindow.on('closed', () => mainwindow = null);
 };
 
+ipcMain.on('open:prod:edit', (e) => {
+    editProduct.editProductWindow();
+})
 
+ipcMain.on('open:prod:adj', (e) => {
+
+})
 
 
 app.on('ready', createWindow);
