@@ -3,6 +3,7 @@
 const path = require('path')
 const fs = require('fs')
 const SQL = require('sql.js')
+const view = require('../view/dbView')
 
 /*
   SQL.js returns a compact object listing the columns separately from the
@@ -114,7 +115,7 @@ module.exports.getProducts = function () {
         let row = db.exec(query)
         if (row !== undefined && row.length > 0) {
           row = _rowsFromSqlDataObject(row[0])
-          //
+          view.showStock(row)
         }
       } catch (error) {
           console.log('model.getProducts : ', error.message)

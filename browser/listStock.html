@@ -46,7 +46,7 @@
                 <th>Description</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="stock-list">
               <tr>
                 <td>Teddy Picker</td>
                 <td>300</td>
@@ -69,11 +69,10 @@
     </div>
 
     <script>
-      const electron = require('electron');
-      const {
-        ipcRenderer
-      } = electron;
+      const electron = require('electron')
+      const {ipcRenderer} = electron;
 
+      // Button click events.
       document.getElementById("adjStock").onclick = () => {
         console.log("Adjust stock clicked")
         ipcRenderer.send('open:prod:adj')
