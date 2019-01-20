@@ -1,0 +1,28 @@
+{
+  "name": "local-sqlite-example",
+  "productName": "Local SQLite Example",
+  "version": "1.0.0",
+  "description": "Demonstrates database-driven Electron using local SQLite.",
+  "main": "main.js",
+  "repository": "https://github.com/patrickmoffitt/local-sqlite-example",
+  "author": "Patrick K. Moffitt, CSM, M.A.",
+  "license": "MIT",
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron .",
+    "start-mac": "/Applications/Electron.app/Contents/MacOS/Electron ."
+  },
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "cheerio": "^0.22.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6",
+    "sql.js": "^0.4.0",
+    "tether": "^1.4.5"
+  },
+  "standard": {
+    "globals": [
+      "$"
+    ]
+  }
+}
