@@ -108,14 +108,14 @@ module.exports.initDb = function (appPath, callback) {
 
 // List products.
 module.exports.getProducts = function () {
-    let db = SQL.dbOpen(window)
+    let db = SQL.dbOpen(window.model.db)
     if (db !== null) {
       let query = 'SELECT * FROM `product` ORDER BY `name` ASC'
       try {
         let row = db.exec(query)
         if (row !== undefined && row.length > 0) {
           row = _rowsFromSqlDataObject(row[0])
-          view.showStock(row)
+          console.log(row)
         }
       } catch (error) {
           console.log('model.getProducts : ', error.message)

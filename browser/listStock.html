@@ -69,8 +69,13 @@
     </div>
 
     <script>
-      const electron = require('electron')
-      const {ipcRenderer} = electron;
+      const app = require('electron').remote.app
+      const {ipcRenderer} = app
+      const path = require('path')
+      
+      window.$ = window.jQuery = require('jquery')
+      window.model = require('../src/db/model')
+      window.model.db = path.join(app.getPath('userData'), 'stock.db')
 
       // Button click events.
       document.getElementById("adjStock").onclick = () => {
@@ -82,6 +87,8 @@
         console.log("Edit Product clicked")
         ipcRenderer.send('open:prod:edit')
       }
+      
+      model.getProducts()
     </script>
   </body>
 </html>
