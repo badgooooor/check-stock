@@ -92,7 +92,9 @@
       products = model.getProducts()
       markup = view.showStock(products)
       
-     
+      const list = document.getElementById("stock-list")
+      list.insertAdjacentHTML('beforeend', markup)
+      
     </script>
   </body>
 </html>
