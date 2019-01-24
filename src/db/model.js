@@ -115,7 +115,7 @@ module.exports.getProducts = function () {
         let row = db.exec(query)
         if (row !== undefined && row.length > 0) {
           row = _rowsFromSqlDataObject(row[0])
-          console.log(row)
+          return row
         }
       } catch (error) {
           console.log('model.getProducts : ', error.message)

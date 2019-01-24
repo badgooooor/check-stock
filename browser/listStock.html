@@ -16,7 +16,7 @@
               <th>ID</th>
               <th>Name</th>
             </thead>
-            <tbody>
+            <tbody id="stock-list">
 
               <!-- Sample data -->
               <tr>
@@ -46,7 +46,7 @@
                 <th>Description</th>
               </tr>
             </thead>
-            <tbody id="stock-list">
+            <tbody>
               <tr>
                 <td>Teddy Picker</td>
                 <td>300</td>
@@ -72,10 +72,11 @@
       const app = require('electron').remote.app
       const {ipcRenderer} = app
       const path = require('path')
-      
-      window.$ = window.jQuery = require('jquery')
+
       window.model = require('../src/db/model')
       window.model.db = path.join(app.getPath('userData'), 'stock.db')
+      
+      const view = require('../src/view/dbView')
 
       // Button click events.
       document.getElementById("adjStock").onclick = () => {
@@ -88,7 +89,10 @@
         ipcRenderer.send('open:prod:edit')
       }
       
-      model.getProducts()
+      products = model.getProducts()
+      markup = view.showStock(products)
+      
+     
     </script>
   </body>
 </html>
