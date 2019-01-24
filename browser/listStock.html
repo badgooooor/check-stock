@@ -88,13 +88,8 @@
         console.log("Edit Product clicked")
         ipcRenderer.send('open:prod:edit')
       }
-      
-      products = model.getProducts()
-      markup = view.showStock(products)
-      
-      const list = document.getElementById("stock-list")
-      list.insertAdjacentHTML('beforeend', markup)
-      
+  
+      view.showStock(model.getProducts())
     </script>
   </body>
 </html>
